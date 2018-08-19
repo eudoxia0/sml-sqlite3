@@ -1,4 +1,4 @@
-signature SQLITE = sig
+signature SQLITE3 = sig
   type db
   type query
 

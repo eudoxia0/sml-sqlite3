@@ -1,4 +1,4 @@
-open SQLite
+open SQLite3
 
 fun println s = print (s ^ "\n")
 

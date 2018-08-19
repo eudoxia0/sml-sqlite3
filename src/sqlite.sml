@@ -1,4 +1,4 @@
-structure SQLite :> SQLITE = struct
+structure SQLite3 :> SQLITE3 = struct
   type pointer = MLton.Pointer.t
   type db_pointer = pointer
   type stmt_pointer = pointer

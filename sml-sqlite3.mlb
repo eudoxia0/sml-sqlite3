@@ -2,5 +2,5 @@ $(SML_LIB)/basis/basis.mlb
 $(SML_LIB)/basis/mlton.mlb
 src/cstring.sig
 src/cstring.sml
-src/sqlite.sig
-src/sqlite.sml
+src/sqlite3.sig
+src/sqlite3.sml

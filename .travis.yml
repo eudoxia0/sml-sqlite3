@@ -1,0 +1,10 @@
+language: generic
+sudo: false
+
+install:
+  - sudo apt-get install -y mlton git make libsqlite3-dev
+
+script:
+- make
+- make test
+- make clean

@@ -8,14 +8,48 @@ or type-safe SQL.
 ~~~sml
 open SQLite3
 
-let val db = opendb "path/to/database.db"
-in
-  let val q = query db "SELECT ... WHERE x = ? AND y = ?"
-              [Integer 10, Text "Hello!"]
+fun test () =
+  let val db = opendb "path/to/database.db"
   in
-    print (rowsToString (execlist q));
-    close db
+    let val q = query db "SELECT ... WHERE x = ? AND y = ?"
+                [Integer 10, Text "Hello!"]
+    in
+      print (rowsToString (execlist q));
+      close db
+    end
   end
+~~~
+
+## The `SQLITE3` Signature
+
+~~~sml
+signature SQLITE3 = sig
+  type db
+  type query
+
+  type bytevec = Word8.word Vector.vector
+
+  datatype value = Null
+                 | Integer of int
+                 | Real of real
+                 | Text of string
+                 | Blob of bytevec
+
+  datatype row = Row of value list
+
+  exception SqlError of string;
+
+  val opendb : string -> db
+  val close : db -> unit
+  val query : db -> string -> value list -> query
+  val exec : query -> unit
+  val execlist : query -> row list
+
+  val valueToString : value -> string
+  val rowToString : row -> string
+  val rowsToString : row list -> string
+
+  val tableExists : db -> string -> bool
 end
 ~~~
 

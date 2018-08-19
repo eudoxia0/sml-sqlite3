@@ -2,7 +2,7 @@ language: generic
 sudo: false
 
 install:
-  - sudo apt-get install -y mlton git make libsqlite3-dev
+  - sudo apt-get install -y mlton make libsqlite3-dev
 
 script:
 - make

@@ -1,5 +1,7 @@
 # `sml-sqlite3`
 
+[![Build Status](https://travis-ci.org/eudoxia0/sml-sqlite3.svg?branch=master)](https://travis-ci.org/eudoxia0/sml-sqlite3)
+
 SQLite3 bindings for MLton. This is a minimal library: there are no fancy types
 or type-safe SQL.
 

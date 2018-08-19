@@ -15,4 +15,8 @@ build: $(MLB_FILE) $(SRC)
 test: $(TEST_MLB_FILE) $(MLB_FILE) $(SRC)
 	$(MLTON) $(MLTON_OPTS) $(TEST_MLB_FILE)
 	./$(TEST_BIN)
+
+clean:
+	rm sml-sqlite3
+	rm $(TEST_BIN)
 	rm testdb

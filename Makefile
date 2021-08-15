@@ -1,5 +1,5 @@
 MLTON := mlton
-MLTON_OPTS := -default-ann 'allowFFI true' -link-opt '-lsqlite3'
+MLTON_OPTS := -link-opt '-lsqlite3'
 MLB_FILE := sml-sqlite3.mlb
 SRC := src/*.sig src/*.sml $(MLB_FILE)
 

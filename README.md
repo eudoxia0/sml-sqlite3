@@ -70,7 +70,7 @@ path/to/sml-sqlite3/sml-sqlite3.mlb
 And add the following command line flags to your MLton command:
 
 ~~~
--default-ann 'allowFFI true' -link-opt '-lsqlite3'
+-link-opt '-lsqlite3'
 ~~~
 
 See the `Makefile` for an example.
